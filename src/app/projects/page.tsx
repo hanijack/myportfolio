@@ -28,7 +28,7 @@ async function Projects() {
       <section className="mb-24 flex flex-col  gap-y-4 gap-x-10 ">
         <h1 className='dark:text-white text-2xl text-black text-center'>Projects </h1>
         <div className="cont ">
-          {pro2.map(proj =><div key={proj._id} className="proj ">
+          {pro2.map((proj:any) =><div key={proj._id} className="proj ">
             <div className="w-1/2">
              <p>{proj.name} </p>
 
