@@ -6,7 +6,7 @@ import Link from "next/link"
 
 
 const fetchedProjects = async() => {
-  const response = await fetch("http://localhost:3000/api/projects" ,{method: "GET" , 
+  const response = await fetch("./api/projects" ,{method: "GET" , 
 headers:{
   "Content-type": "application/json"
 }
