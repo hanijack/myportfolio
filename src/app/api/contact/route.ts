@@ -7,5 +7,5 @@ export async function POST(req: NextRequest) {
     await connectMong();
     await Email.create({ name, email, message });
 
-    return NextResponse.json({ message: "Email sent successfuly " });
+    return NextResponse.json({ message: "Email sent successfuly " },{status:200});
 }

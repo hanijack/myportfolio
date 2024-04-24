@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="flex flex-col max-w-[300px] gap-2">
         <Image src={pic} alt="img" className="rounded-xl"/>
         <p>Build your website with the most modern technologies.
-            with focuses on the most friendly  ui/ux . </p>
+            with focusing on the most friendly  ui/ux . </p>
       </div>
       <Form/>  
     </section>

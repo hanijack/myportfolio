@@ -31,6 +31,7 @@ export default function Form() {
                     "Content-Type": "application/json"
                 }
             })
+            
 
             if (!response.ok) { console.log("There was a request error " + response.status) }
 
@@ -42,12 +43,12 @@ export default function Form() {
     return (
         <form onSubmit={handleSubmit(formSubmit)} className="max-w-2xl flex gap-4 flex-col items-center justify-start">
 
-            <div className="w-full flex items-center justify-between gap-2">
+            <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 ">
                 <label htmlFor="name">
                     Name
                 </label>
                 <input
-                    className="w-[80%] py-2 rounded-md pl-1 border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
+                    className="w-[80%] min-w-[250px] py-2 rounded-md pl-2 border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
                     id="name"
                     type="text"
                     placeholder="Name"
@@ -64,12 +65,12 @@ export default function Form() {
             </div>
             {errors.name && <p className="text-red-300">{errors.name.message}</p>}
 
-            <div className="w-full flex items-center justify-between gap-2">
+            <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-2">
                 <label htmlFor="email">
                     Email
                 </label>
                 <input
-                    className="w-[80%] py-2 rounded-md pl-1 border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
+                    className="w-[80%] min-w-[250px] py-2 rounded-md pl-2 border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
                     id="email"
                     type="email"
                     placeholder="Email"
@@ -84,13 +85,13 @@ export default function Form() {
                 />
             </div>
             {errors.email && <p className="text-red-300">{errors.email.message}</p>}
-            <div className="w-full flex justify-between gap-2">
+            <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-2">
 
                 <label htmlFor="text">
                     Text
                 </label>
                 <textarea
-                    className="w-[80%] rounded-md pl-1 min-h-[200px] border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
+                    className="w-[80%] min-w-[250px] rounded-md py-2  pl-2 min-h-[200px] border border-gray-400 focus:outline-none  focus:border-gray-500 dark:text-[#dce2e6] dark:focus:border-white"
                     placeholder="Your message"
                     id="text"
                     {...register("message", {
@@ -103,11 +104,11 @@ export default function Form() {
                 />
             </div>
             {errors.message && <p className="text-red-300">{errors.message.message}</p>}
-            <div className='w-[80%] flex justify-center ml-auto'>
-                <button disabled={isSubmitting} type="submit" className="bg-gray-300 px-4 py-2 rounded-xl hover:scale-105 transition disabled:cursor-not-allowed disabled:scale-1">Submit</button>
+            <div className='w-[80%] flex justify-center items-center sm:ml-auto'>
+                <button disabled={isSubmitting} type="submit" className=" submit-but">Submit</button>
             </div>
+            { isSubmitSuccessful && <p className='w-[80%] flex justify-center items-center sm:ml-auto'>Email has been sent </p>}
         </form>
     )
 }
-// get some outline for the focus state of inputs
-// get message when form submitted succssefully
+

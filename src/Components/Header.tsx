@@ -1,17 +1,18 @@
 "use client"
 
 
-import React, { useEffect } from "react";
+import React, { useEffect ,useState } from "react";
 import Link from "next/link"
 import Theme from "./Theme";
+import { usePathname } from 'next/navigation'
 import { AiOutlineCloseCircle, AiOutlineMenu } from "react-icons/ai"
 
 
 const Header = () => {
 
-    const [isOpen, setIsOpen] = React.useState(false);
-    const [mounted, setMounted] = React.useState(false);
-
+    const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const pathName = usePathname()
     function openMenu() {
         setIsOpen(prev => !prev)
     }
@@ -25,7 +26,7 @@ const Header = () => {
         return null
     }
     return (
-        <header className="fixed top-0 w-full z-30 mb-16 bg-white/75 py-6 dark:bg-[#20232a]/75  ">
+        <header className="fixed top-0 w-full z-30 mb-16 bg-white/75 py-6 dark:bg-[#20232a]/75 backdrop-blur-sm ">
             <nav className="hidden  mx-auto md:flex w-full max-w-3xl flex-row-reverse items-center justify-between px-6">
                 <h2 className="slogan">
                     <Link href="/">MD</Link>
@@ -34,22 +35,22 @@ const Header = () => {
                 <Theme />
                 </i>
                 <ul className="flex justify-between w-2/4 ">
-                    <li>
+                    <li className={`${pathName === "/"? "active" : ""}`}>
                         <Link href="/" className="nav-link">
                             Home
                         </Link>
                     </li>
-                    <li>
+                    <li className={`${pathName === "/about"? "active" : ""}`}>
                         <Link href="/about" className="nav-link">
                             About
                         </Link>
                     </li>
-                    <li>
+                    <li className={`${pathName=== "/projects"? "active" : ""}`}>
                         <Link href="/projects" className="nav-link">
-                            projects
+                            Projects
                         </Link>
                     </li>
-                    <li>
+                    <li className={`${pathName === "/contact"? "active" : ""}`}>
                         <Link href="/contact" className="nav-link">
                             Contact
                         </Link>
@@ -69,9 +70,9 @@ const Header = () => {
                 </i>
             
                 
-                <ul className={`absolute p-16 top-0 right-0 flex flex-col  justify-between items-end h-screen bg-[#20232a] w-2/3 ease-out duration-300  `} style={{ right: isOpen ? "0" : "-100vw" }}>
+                <ul className={`absolute p-4 top-16 right-3 flex flex-col  justify-between bg-[#cbd5e1] items-end h-[200px] dark:bg-[#4c525e] w-2/5 ease-out duration-300 rounded-md `} style={{ right: isOpen ? "0" : "-100vw" }}>
 
-                    <i className="text-2xl hover:text-[#3e93d5] cursor-pointer">
+                    <i className="text-2xl absolute hover:text-[#0865b6] cursor-pointer left-2">
 
                         <AiOutlineCloseCircle
 
@@ -116,4 +117,3 @@ const Header = () => {
 
 export default Header;
 
-// get navlin active state and hover state 
