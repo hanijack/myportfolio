@@ -13,7 +13,7 @@ const Footer = () => {
             <li className='hover:text-[#3e93d5]'><Link href="/projects">Projects</Link></li>
             <li className='hover:text-[#2c82ce]'><Link href="/contact">Contact</Link></li>
           </ul>
-          <ul className='w-1/2 mt-12 flex justify-between'>
+          <ul className='w-full md:w-2/3 flex flex-wrap my-4 justify-center items-center md:flex-nowrap gap-4 md:justify-between'>
             <li className='hover:text-[#3e93d5]'><Link href="https://www.linkedin.com/in/mohamad-darklt-892834208/"><FaLinkedin/></Link></li>
             <li className='hover:text-[#3e93d5]'><Link href="https://github.com/hanijack"><FaGithub/></Link></li>
             <li className='hover:text-[#2c82ce]'><Link href="https://www.facebook.com/profile.php?id=100008114293788"><FaFacebook/></Link></li>

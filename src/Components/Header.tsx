@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 w-full z-30 mb-16 bg-white/75 py-6 dark:bg-[#20232a]/75 backdrop-blur-sm ">
             <nav className="hidden  mx-auto md:flex w-full max-w-3xl flex-row-reverse items-center justify-between px-6">
-                <h2 className="slogan">
+                <h2>
                     <Link href="/">MD</Link>
                 </h2>
                 <i className="hover:bg-gray-500 p-2 rounded-xl cursor-pointer">
@@ -57,9 +57,9 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <nav className="md:hidden flex mx-auto justify-between items-center px-4">
+            <nav className="md:hidden flex mx-auto justify-between items-center px-6">
                 <h2>
-                    <Link className="slogan" href="/">MD</Link>
+                    <Link href="/">MD</Link>
                 </h2>
                 <i className="hover:bg-gray-500 p-2 rounded-xl cursor-pointer">
                 <Theme />
