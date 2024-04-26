@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-const fetchSingleProject= async (id)=>{
+
+
+const fetchSingleProject= async (id:String)=>{
   const response = await fetch(`http://localhost:3000/api/projects/${id}`,{
     method:"GET",
     headers: {
