@@ -17,7 +17,7 @@ const fetchSingleProject= async (id:String)=>{
   }
   return response.json()
 } 
-  async function Proj({params}) {
+  async function Proj({params}: { params: { id: string } }) {
     const {id} = params
     const {project}= await fetchSingleProject(id)
     console.log(project)
