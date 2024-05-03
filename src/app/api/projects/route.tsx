@@ -9,6 +9,5 @@ export async function GET(req:NextRequest) {
     await connectMong();
     const projects = await Project.find()
     console.log("connected")
-    console.log(projects)
     return NextResponse.json({projects})
 }
