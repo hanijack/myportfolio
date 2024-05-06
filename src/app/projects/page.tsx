@@ -5,8 +5,7 @@ import { getAllProjects } from "./utils";
 
 
 
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+
 
 async function Projects() {
   const { projects } = await getAllProjects()
