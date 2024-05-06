@@ -1,29 +1,15 @@
+
 import Image from "next/image"
 import Link from "next/link"
+import { getAllProjects } from "./utils";
 
 
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
-const fetchedProjects = async () => {
-  const response = await fetch("../../api/projects", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-
-  if (!response) {
-    const message = "An error occurred while fetching projects  "
-  }
-  return response.json()
-}
-
-
 async function Projects() {
-  const { projects } = await fetchedProjects()
-  // #282c34 slate-600
+  const { projects } = await getAllProjects()
   return (
     <>
       <section className="mb-24 flex flex-col  gap-y-4 gap-x-10 bg-[#282c34] p-4 rounded-md">

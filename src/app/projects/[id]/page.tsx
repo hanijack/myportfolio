@@ -1,24 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import { getProject } from "../utils"
 
-const fetchSingleProject= async (id:String)=>{
-  const response = await fetch(`../../api/projects/${id}`,{
-    method:"GET",
-    headers: {
-      "Content-Type": "application/json"
-    }
-    , cache: "no-cache"
-  }
-  
-  )
-  if (!response) {
-    const message = "An error occurred while fetching projects  "
-  }
-  return response.json()
-} 
   async function Proj({params}: { params: { id: string } }) {
     const {id} = params
-    const {project}= await fetchSingleProject(id)
+    const {project}= await getProject(id)
   return (
     
         <>
