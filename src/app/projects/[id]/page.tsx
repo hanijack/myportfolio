@@ -3,7 +3,7 @@ import Link from "next/link"
 
 
 const fetchSingleProject= async (id:String)=>{
-  const response = await fetch(`http://localhost:3000/api/projects/${id}`,{
+  const response = await fetch(`${process.env.BASE_URI}/api/projects/${id}`,{
     method:"GET",
     headers: {
       "Content-Type": "application/json"
