@@ -9,7 +9,7 @@ async function getAllProjects(){
 }
 
 
-async function getProject(id){
+async function getProject(id:string){
     const host = headers().get("host");
     const protocal = process?.env.NODE_ENV==="development"?"http":"https"
     let res = await fetch(`${protocal}://${host}/api/projects/${id}`, { cache: "no-store" });
