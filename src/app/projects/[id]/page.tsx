@@ -1,9 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
-
 const fetchSingleProject= async (id:String)=>{
-  const response = await fetch(`${process.env.BASE_URI}/api/projects/${id}`,{
+  const response = await fetch(`../../api/projects/${id}`,{
     method:"GET",
     headers: {
       "Content-Type": "application/json"
