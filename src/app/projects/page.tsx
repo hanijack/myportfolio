@@ -2,9 +2,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { getAllProjects } from "./utils";
+import { Metadata } from "next";
 
 
-
+export const metadata: Metadata = {
+  title: 'Projects',
+}
 
 
 async function Projects() {

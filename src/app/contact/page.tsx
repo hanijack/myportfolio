@@ -1,9 +1,12 @@
-
+import { Metadata } from "next";
 import Image from "next/image";
 import Form from "../../Components/Form"
 import pic from "../../../public/work.jpg"
 
-
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Welcome to my web corner',
+}
 
 
 

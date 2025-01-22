@@ -1,5 +1,9 @@
-import React from 'react'
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Welcome to my web corner',
+}
 const About = () => {
   return (
     <>
@@ -60,8 +64,8 @@ const About = () => {
           <div className="flex flex-col  w-full max-w-[400px] gap-4">
             <h5>NextJs</h5>
             <div className="relative border-b-8 rounded-lg">
-              <div className="w-[50%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">50%</div>
+              <div className="w-[70%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
+              <div className="-top-[30px] absolute">70%</div>
             </div>
           </div>
           <div className="flex flex-col  w-full max-w-[400px] gap-4">

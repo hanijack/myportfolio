@@ -1,10 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
 import { getProject } from "../utils"
+import { Metadata } from "next";
 
-  async function Proj({params}: { params: { id: string } }) {
-    const {id} = params
-    const {project}= await getProject(id)
+  type Props = { params: { id: string } }
+  export const generateMetadata=async({params} :Props):Promise<Metadata>=>{
+    const {project} = await getProject(params.id)
+    return {
+      title:`Project ${project.name}`
+    }
+  }
+  async function Proj({params}:Props ) {
+    const {project}= await getProject(params.id)
+
+ 
   return (
     
         <>
