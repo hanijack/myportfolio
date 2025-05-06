@@ -20,7 +20,7 @@ async function Projects() {
           {projects?.map((proj: any | null) => <div key={proj?._id} className="proj ">
             <Link  href={`./projects/${proj._id}`} className="w-1/2 hover:scale-[1.05] transition ease-in-out duration-300 flex flex-col gap-2">
               <h4 className="text-sm text-center text-white">{proj?.name} </h4>
-              <Image src={proj?.imgUrl} alt={proj?.name} width={200} height={300} className="mx-auto  rounded-md "></Image>
+              <Image src={proj?.imgUrl} alt={proj?.name} width={200} height={300} className="w-[200px] h-[200px] mx-auto  rounded-md "></Image>
             </Link>
           </div>)}
         </div>
