@@ -28,10 +28,10 @@ export default function Home() {
         <div className='flex flex-col'>
           <h2 className='font-bold mb-8 text-xl dark:text-white'> Current preferred stacks</h2>
           <div className='grid grid-cols-2 md:grid-cols-4  gap-4'>
-            <Image src={next} width={100} height={100} className='mx-auto'/>
-            <Image src={React} width={100} height={100} className='mx-auto'/>
-            <Image src={Redux} width={100} height={100} className='mx-auto'/>
-            <Image src={Js} width={100} height={100} className='mx-auto'/>
+            <Image src={next} width={100} height={100} className='mx-auto' alt='next-logo'/>
+            <Image src={React} width={100} height={100} className='mx-auto' alt='react-logo'/>
+            <Image src={Redux} width={100} height={100} className='mx-auto' alt='redux-logo'/>
+            <Image src={Js} width={100} height={100} className='mx-auto' alt='js-logo'/>
           </div>
           </div>
      </div>
