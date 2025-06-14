@@ -23,7 +23,7 @@ import { Metadata } from "next";
           <div className="flex flex-col flex-grow justify-between gap-4 md:w-1/2">
             <h2 className="text-lg font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Tech Stack</h2>
 <div className="flex flex-wrap gap-2 mb-8">
-  {project.techn?.map((tech, idx) => (
+  {project.techn?.map((tech:string, idx:number) => (
   <span
     key={tech}
     className={`animate-fade  px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-700 dark:bg-slate-700 dark:text-indigo-300 shadow-sm`}
