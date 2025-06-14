@@ -22,14 +22,14 @@ const Contact = () => {
   Got a project, opportunity, or just want to talk tech? I’d love to hear from you.
 </p>
 <div className="flex items-center gap-4 justify-between">
-  <a href="mailto:your@email.com"  className="inline-block mt-4 px-5 py-2 text-sm bg-indigo-600 text-white rounded hover:bg-indigo-500 transition">
+  <a href="mailto:hani.darklt@gmail.com"  className="inline-block mt-4 px-5 py-2 text-sm bg-indigo-600 text-white rounded hover:bg-indigo-500 transition">
      <span>📬</span> Say&nbsp;Hello
   </a>
   <div className="flex gap-3 text-2xl justify-end">
-    <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600">
+    <a href="https://github.com/hanijack" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600">
       <FaGithub />
     </a>
-    <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600">
+    <a href="https://www.linkedin.com/in/mohamad-darklt-892834208" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600">
       <FaLinkedin />
     </a>
   </div>

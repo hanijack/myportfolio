@@ -50,13 +50,13 @@ export default function Home() {
     <div className="flex gap-4 mt-8 justify-evenly">
       <Link
         href="/about"
-        className="px-4 py-2 bg-slate-300 hover:bg-slate-400 rounded-md hover:text-blue-800 text-[#0865b6]"
+            className="px-5 py-2 text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded-md transition"
       >
         About
       </Link>
       <Link
         href="/contact"
-        className="px-4 py-2 bg-slate-900 rounded-md hover:bg-slate-800 hover:text-[#3e93d5] text-[#0865b6]"
+            className="px-5 py-2 border border-indigo-600 text-indigo-600 dark:text-indigo-300 dark:border-indigo-400 hover:bg-indigo-100 dark:hover:bg-slate-700 rounded-md transition"
       >
         Contact
       </Link>
@@ -65,7 +65,7 @@ export default function Home() {
 </section>
 
         <div className="flex flex-col">
-          <h2 className="font-bold mb-8 text-xl dark:text-white">
+          <h2 className="text-2xl font-semibold mb-8 text-indigo-600 dark:text-indigo-400 ">
             
             Current preferred stacks
           </h2>

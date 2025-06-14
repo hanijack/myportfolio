@@ -46,10 +46,9 @@ const About = () => {
         <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-10">
           I thrive on refining deployment setups, chaining advanced MongoDB
           queries with precision, and crafting experiences that balance
-          performance with elegance. Whether it's spinning up a notes app or
-          refactoring backend error handling—I'm all in.
+          performance with elegance. From notes apps to backend refactors—I’m all in.”
         </p>
-
+            <hr className="my-6 border-gray-300 dark:border-gray-600"></hr>
         <h2 className="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
           Beyond the Code
         </h2>
