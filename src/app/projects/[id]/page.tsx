@@ -12,7 +12,7 @@ import { Metadata } from "next";
   }
   async function Proj({params}:Props ) {
     const {project}= await getProject(params.id)
-
+    
  
   return (
     
@@ -21,9 +21,19 @@ import { Metadata } from "next";
         <div className="flex flex-col sm:flex-row  py-4 my-4 gap-2">
           <Image src={project.imgUrl} width={300} height={300} alt={project.name} className="rounded-md self-center border-[1px] w-[300px] h-[300px] border-[#3e93d5] border-opacity-50 shadow-xl dark:shadow-white dark:shadow-sm"></Image>
           <div className="flex flex-col flex-grow justify-between gap-4 md:w-1/2">
-            <ul className="flex flex-col gap-2 justify-center items-start dark:text-white p-4">{project.techn.map((item:string , index:number) =>{
-              return <li key={index}>{index+1}-{item}</li>
-            })}</ul>
+            <h2 className="text-lg font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Tech Stack</h2>
+<div className="flex flex-wrap gap-2 mb-8">
+  {project.techn?.map((tech, idx) => (
+  <span
+    key={tech}
+    className={`animate-fade  px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-700 dark:bg-slate-700 dark:text-indigo-300 shadow-sm`}
+  >
+    {tech}
+  </span>
+))}
+
+</div>
+
             <ul className="flex justify-evenly">
               <li className="submit-but"><Link href={project.links[0]}>Website</Link></li>
               <li className="submit-but"><Link href={project.links[1]}>Github</Link></li>

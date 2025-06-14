@@ -1,107 +1,115 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'Welcome to my web corner',
-}
+  title: "About",
+  description: "Welcome to my web corner",
+};
 const About = () => {
   return (
     <>
-            <section className="mb-24 flex flex-col items-start gap-y-4 gap-x-10 md:items-center">
-              <h1 className='dark:text-white text-2xl text-black'>About</h1>
-        <div className="md:text-center  ">
-          <p className='my-4'>
+      <section className="max-w-4xl mx-auto px-4 py-16 text-gray-800 dark:text-gray-200 animate-fade">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-indigo-600 dark:text-indigo-400">
+          About Me
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-500  leading-relaxed mb-10">
+          I'm{" "}
+          <span className="font-semibold  text-[#3e93d5]">Mohamad Darklt</span>,
+          a full-stack developer with a strong focus on the MERN stack and a
+          love for solving real-world problems with clean code and intuitive
+          design. I enjoy sculpting secure backend logic, building seamless
+          frontend experiences, and learning every step of the way.
+        </p>
 
-        Seeking knowledge is an eternal process that stems from humility,
-        has pleasure in contemplating the immensity of the attempt.
-          </p>
-          <q>The moment you stop learning is the moment you start dying</q>
-          <br/>
-          <cite> <b className='text-gray-500 dark:text-gray-400'>Albert Einstein.</b></cite>
+        <h2 className="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
+          My Toolbox
+        </h2>
+        <div className="flex flex-wrap gap-3 mb-10">
+          {[
+            "React",
+            "Next.js",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+            "Tailwind CSS",
+            "Redux",
+            "Node.js",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-slate-700 dark:text-indigo-300 rounded-full text-sm font-medium transition transform hover:scale-105 hover:bg-indigo-200 dark:hover:bg-slate-600 shadow-sm hover:shadow-md"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-      </section>
-      <h2 className=' text-black text-center text-xl font-bold dark:text-white mb-12'>Skills</h2>
-      <section className="flex  justify-start flex-col md:flex-row md:justify-between gap-8 text-center">
-        <div className="md:w-[45%] flex flex-col gap-4 items-center">
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>Html</h5>
-            <div className="relative border-b-8 rounded-lg ">
-              <div className="w-[70%] border-b-8 border-gray-500 absolute top-0  rounded-lg" ></div>
-              <div className="-top-[30px] absolute ">70%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>Css</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[75%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">75%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>Js</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[70%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">70%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>React</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[85%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">85%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>GraphQL</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[30%] border-b-8 border-gray-500 absolute top-0  rounded-lg" ></div>
-              <div className="-top-[30px] absolute">30%</div>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-[45%] flex flex-col gap-4 items-center">
-          
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>NextJs</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[70%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">70%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>ExpressJs</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[40%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">40%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>NodeJs</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[30%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">30%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>MongoDB</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[30%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">30%</div>
-            </div>
-          </div>
-          <div className="flex flex-col  w-full max-w-[400px] gap-4">
-            <h5>TypeScript</h5>
-            <div className="relative border-b-8 rounded-lg">
-              <div className="w-[30%] border-b-8 border-gray-500 absolute top-0  rounded-lg"></div>
-              <div className="-top-[30px] absolute">40%</div>
-            </div>
-          </div>
+        <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-10">
+          I thrive on refining deployment setups, chaining advanced MongoDB
+          queries with precision, and crafting experiences that balance
+          performance with elegance. Whether it's spinning up a notes app or
+          refactoring backend error handling—I'm all in.
+        </p>
 
+        <h2 className="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
+          Beyond the Code
+        </h2>
+        <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-10">
+          Outside the console, you'll often find me immersed in anime like{" "}
+          <span className="italic text-[#3e93d5]">Frieren</span> or{" "}
+          <span className="italic text-[#3e93d5]">Violet Evergarden</span>
+          —stories that blend emotion, artistry, and growth. That same
+          storytelling mindset flows into my work: I approach building with
+          intentionality, narrative, and care.
+        </p>
+
+        <div className="flex gap-4 mt-8">
+          <Link
+            href="/projects"
+            className="px-5 py-2 text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded-md transition"
+          >
+            View Projects
+          </Link>
+          <Link
+            href="/contact"
+            className="px-5 py-2 border border-indigo-600 text-indigo-600 dark:text-indigo-300 dark:border-indigo-400 hover:bg-indigo-100 dark:hover:bg-slate-700 rounded-md transition"
+          >
+            Contact Me
+          </Link>
         </div>
       </section>
 
+      <section className="mt-16">
+        <h2 className="text-2xl font-semibold mb-6 text-indigo-600 dark:text-indigo-400">
+          Skills
+        </h2>
+        <p className="text-base text-gray-600 dark:text-gray-300 mb-4">
+          These are the technologies I've been working with—some deeply
+          mastered, others actively growing.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {[
+            { name: "HTML", level: "Proficient" },
+            { name: "CSS", level: "Proficient" },
+            { name: "JavaScript", level: "Proficient" },
+            { name: "React", level: "Advanced" },
+            { name: "Next.js", level: "Strong" },
+            { name: "Express.js", level: "Intermediate" },
+            { name: "Node.js", level: "Growing" },
+            { name: "MongoDB", level: "Intermediate" },
+            { name: "TypeScript", level: "Growing" },
+            { name: "GraphQL", level: "Exploring" },
+          ].map(({ name, level }) => (
+            <span
+              key={name}
+              className="px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-slate-700 dark:text-indigo-300 rounded-full text-sm font-medium hover:scale-105 transition transform shadow-sm hover:shadow-md"
+            >
+              {name} : {level}
+            </span>
+          ))}
+        </div>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
