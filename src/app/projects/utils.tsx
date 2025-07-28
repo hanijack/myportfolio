@@ -14,7 +14,7 @@ async function getAllProjects() {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store",
+    next: { revalidate: 60 }
   });
   let projects = res.json();
   return projects;
@@ -28,7 +28,7 @@ async function getProject(id: string) {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store",
+    next: { revalidate: 60 }
   });
   let project = res.json();
   return project;

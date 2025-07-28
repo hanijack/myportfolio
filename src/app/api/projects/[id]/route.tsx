@@ -9,6 +9,5 @@ export async function GET(req:NextRequest , {params}:{params:{id:any}}) {
     await connectMong();
     const project = await Project.findOne({ _id: id })
     console.log("connected")
-    console.log(project)
     return NextResponse.json({project})
 }
